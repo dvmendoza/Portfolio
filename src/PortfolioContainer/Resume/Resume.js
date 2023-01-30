@@ -7,7 +7,7 @@ import "./Resume.css";
 const Resume = (props) => {
     /* STATES */
     const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
-    const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
+    const [carouselOffsetStyle, setCarouselOffsetStyle] = useState({});
   
     let fadeInScreenHandler = (screen) => {
       if (screen.fadeInScreen !== props.id) return;
@@ -67,26 +67,26 @@ const Resume = (props) => {
     const projectsDetails = [
       {
         title: "Personal Portfolio Website",
-        duration: { fromDate: "2020", toDate: "2021" },
+        duration: { fromDate: "2023", toDate: "2023" },
         description:
           "A Personal Portfolio website to showcase all my details and projects at one place.",
         subHeading: "Technologies Used: React JS, Bootsrap",
       },
       {
-        title: "Mobile E-shop ",
-        duration: { fromDate: "2020", toDate: "2021" },
+        title: "Chatterbox (Under Construction)",
+        duration: { fromDate: "2022", toDate: "2023" },
         description:
-          "An ecommerce application designed to sell products online wth payment system integration",
+          "An social-media application designed to chat with friends and meet new ones. OAuth integration as well as increased user security by integrating bcrypt to hash passwords.",
         subHeading:
-          "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+          "Technologies Used:  Python, Flask, MySQL and socket.io.",
       },
       {
-        title: "Ecommerce Website ",
-        duration: { fromDate: "2020", toDate: "2021" },
+        title: "Flappy Bird Game",
+        duration: { fromDate: "2023", toDate: "2023" },
         description:
-          "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
+          "Viral flappy bird application remake.",
         subHeading:
-          "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+          "Technologies Used: Java, Eclipse IDE",
       },
     ];
   
@@ -106,7 +106,7 @@ const Resume = (props) => {
           toDate={"2022"}
         />
         <ResumeHeading
-          heading={"High School "}
+          heading={"High School"}
           subHeading={"Corona Centennial High School"}
           fromDate={"2010"}
           toDate={"2013"}
@@ -117,8 +117,8 @@ const Resume = (props) => {
       <div className="resume-screen-container" key="work-experience">
         <div className="experience-container">
           <ResumeHeading
-            heading={"Police Officer"}
-            subHeading={"FULL STACK DEVELOPER INTERN"}
+            heading={"City of Redmond / Whatcom County"}
+            subHeading={"Police Officer / Deputy Sheriff"}
             fromDate={"2018"}
             toDate={"2022"}
           />
@@ -128,23 +128,20 @@ const Resume = (props) => {
               online instructor on udemy.
             </span>
           </div>
+          <br />
+          <ResumeHeading
+            heading={"United States Navy"}
+            subHeading={"Aviation Support Equipmentt Technician"}
+            fromDate={"2014"}
+            toDate={"2018"}
+          />
           <div className="experience-description">
             <span className="resume-description-text">
-              - Developed an ecommerce website for client with the dashboard for
-              managing the products, managing reviews, users, payment etc. .
+              Currently working as MERN stack web and mobile developer and also an
+              online instructor on udemy.
             </span>
-            <br />
-            <span className="resume-description-text">
-              - Integrated the web app with backend services to create new user
-              onboarding application with dynamic form content.{" "}
-            </span>
-            <br />
-            <span className="resume-description-text">
-              - I stretch my mental capacity to develope UI as per the given
-              designs.
-            </span>
-            <br />
           </div>
+          <br />
         </div>
       </div>,
   
@@ -184,35 +181,35 @@ const Resume = (props) => {
       /* Interests */
       <div className="resume-screen-container" key="interests">
         <ResumeHeading
-          heading="Teaching"
-          description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+          heading="Fishing / Hiking"
+          description="Apart from being a tech enthusiast and code writer, I also love to fish and explore the outdoors. Washington State had some of the best salmon fishing opportunities and breathtaking views."
         />
         <ResumeHeading
-          heading="Music"
-          description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+          heading="Videography"
+          description="I love to live in the moment but also love to capture those moments. Many times I sat back and smiled with joy thinking about moments I've shared with my wife and kids. Today, I am able look back and watch those same memories."
         />
         <ResumeHeading
           heading="Competitive Gaming"
-          description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+          description="I like to challenge my reflexes a lot while competing in FPS games such as Apex Legends, Call of Duty and Overwatch 2."
         />
       </div>,
     ];
   
-    const handleCarousal = (index) => {
+    const handleCarousel = (index) => {
       let offsetHeight = 360;
   
-      let newCarousalOffset = {
+      let newCarouselOffset = {
         style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
       };
   
-      setCarousalOffsetStyle(newCarousalOffset);
+      setCarouselOffsetStyle(newCarouselOffset);
       setSelectedBulletIndex(index);
     };
   
     const getBullets = () => {
       return resumeBullets.map((bullet, index) => (
         <div
-          onClick={() => handleCarousal(index)}
+          onClick={() => handleCarousel(index)}
           className={
             index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
           }
@@ -231,8 +228,8 @@ const Resume = (props) => {
     const getResumeScreens = () => {
       return (
         <div
-          style={carousalOffsetStyle.style}
-          className="resume-details-carousal"
+          style={carouselOffsetStyle.style}
+          className="resume-details-carousel"
         >
           {resumeDetails.map((ResumeDetail) => ResumeDetail)}
         </div>
