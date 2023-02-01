@@ -107,8 +107,8 @@ const Resume = (props) => {
         />
         <ResumeHeading
           heading={"High School"}
-          subHeading={"Corona Centennial High School"}
-          fromDate={"2010"}
+          subHeading={"Rancho Verde / Corona Centennial High School"}
+          fromDate={"2009"}
           toDate={"2013"}
         />
       </div>,
@@ -116,6 +116,18 @@ const Resume = (props) => {
       /* WORK EXPERIENCE */
       <div className="resume-screen-container" key="work-experience">
         <div className="experience-container">
+        <ResumeHeading
+            heading={"Software Engineer"}
+            subHeading={"Full Stack Software Engineer"}
+            fromDate={"2022"}
+            toDate={"Present"}
+          />
+          <div className="experience-description">
+            <span className="resume-description-text">
+              Currently working as MERN stack web and mobile developer.
+            </span>
+          </div>
+          <br />
           <ResumeHeading
             heading={"City of Redmond / Whatcom County"}
             subHeading={"Police Officer / Deputy Sheriff"}
@@ -124,8 +136,7 @@ const Resume = (props) => {
           />
           <div className="experience-description">
             <span className="resume-description-text">
-              Currently working as MERN stack web and mobile developer and also an
-              online instructor on udemy.
+            Leverage strong communication, decision making, and negotiation skills to mitigate conflict.
             </span>
           </div>
           <br />
@@ -137,8 +148,7 @@ const Resume = (props) => {
           />
           <div className="experience-description">
             <span className="resume-description-text">
-              Currently working as MERN stack web and mobile developer and also an
-              online instructor on udemy.
+            Successfully oversaw and maintained over $400M worth of equipment and aircraft.
             </span>
           </div>
           <br />
