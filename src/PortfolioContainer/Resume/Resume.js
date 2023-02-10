@@ -81,10 +81,10 @@ const Resume = (props) => {
           "Technologies Used:  Python, Flask, MySQL and socket.io.",
       },
       {
-        title: "Flappy Bird Game",
+        title: "joyBundler",
         duration: { fromDate: "2023", toDate: "2023" },
         description:
-          "Viral flappy bird application remake.",
+          "Web application for expecting parents to research names for their baby.",
         subHeading:
           "Technologies Used: Java, Eclipse IDE",
       },
